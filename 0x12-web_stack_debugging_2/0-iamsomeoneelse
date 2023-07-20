@@ -7,3 +7,4 @@ if [[ $# -ne 1 ]]; then
 fi
 
 su "$1" -c "whoami"
+
