@@ -1,4 +1,4 @@
-#this fixes bad `phpp` extensions to `php` in the WordPress file `wp-settings.php`.
+#this fixes why Apache is returning a 500 error.`.
 
 exec { 'fix-apache-500-error':
   command => '/path/to/fix/script/or/command',
