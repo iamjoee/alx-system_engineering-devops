@@ -1,6 +1,6 @@
-# Fixes bad  `phpp` extensions to `php` in the WordPress file `wp-settings.php`.
+#this fixes bad `phpp` extensions to `php` in the WordPress file `wp-settings.php`.
 
-exec { 'fix-wordpress':
-  command => 'sed -i s/phpp/php/g /var/www/html/wp-settings.php',
-  path    => '/usr/local/bin/:/bin/'
+exec { 'fix-apache-500-error':
+  command => '/path/to/fix/script/or/command',
+  onlyif  => '/path/to/check/if/fix/is/needed',
 }
