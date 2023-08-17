@@ -1,0 +1,16 @@
+[unit]
+Description=Gunicorn instance to serve web_dynamic/2-hbnb.py
+After=network.target
+
+[Service]
+User=your_username
+Group=your_groupname
+WorkingDirectory=/path/to/web_dynamic
+ExecStart=/path/to/virtualenv/bin/gunicorn -w 3 -b 0.0.0.0:5003 2-hbnb:app
+Restart=always
+RuntimeDirectory=gunicorn
+RuntimeDirectoryMode=755
+
+[Install]
+WantedBy=multi-user.target
+
